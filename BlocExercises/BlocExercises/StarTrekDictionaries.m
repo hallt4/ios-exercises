@@ -19,12 +19,12 @@
 - (NSArray *)arrayOfFavoriteDrinksForStarTrekCharacters:(NSArray *)charactersArray {
     /* WORK HERE */
     
-    NSMutableArray *mutableFavoriteDrinksArray = [charactersArray mutableCopy];
+    NSMutableArray *mutableFavoriteDrinksArray = [[NSMutableArray alloc] init];
     for (NSDictionary *key in charactersArray) {
         
         NSMutableString *value = [key objectForKey:@"favorite drink"];
         [mutableFavoriteDrinksArray addObject:value];
-        [mutableFavoriteDrinksArray removeObjectAtIndex:0];
+        
     }
     NSArray *favoriteDrinksArray = mutableFavoriteDrinksArray;
     return favoriteDrinksArray;
