@@ -19,9 +19,8 @@
 - (NSArray *) arrayOfNumbersBetweenNumber:(NSInteger)number andOtherNumber: (NSInteger)otherNumber {
     /* WORK HERE */
     
-    NSArray *myArray = @[];
     
-    NSMutableArray *arrayOfNumbersBetweenNumberAndOtherNumber = [myArray mutableCopy];
+    NSMutableArray *arrayOfNumbersBetweenNumberAndOtherNumber = [[NSMutableArray alloc] init];
     
     for (NSInteger i = number; i <= otherNumber; i++) {
         [arrayOfNumbersBetweenNumberAndOtherNumber addObject:@(i)];
@@ -38,6 +37,13 @@
             lowestNumberInArrayOfNumbers = [numbers integerValue];
         }
     }
+    NSNumber *three = @3;
+    NSNumber *threeLongWay = [NSNumber numberWithInteger:3];
+    
+    NSNumber *yes = @YES;
+    NSNumber *yesTheLongWay = [NSNumber numberWithBool:YES];
+    
+    
     
     return lowestNumberInArrayOfNumbers;
 }
